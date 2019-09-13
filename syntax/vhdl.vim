@@ -167,31 +167,31 @@ syn match vhdlComment "--.*$" contains=@Spell
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
-if version >= 508 || !exists("did_vhdl_syntax_inits")
-  if version < 508
-    let did_vhdl_syntax_inits = 1
-    command -nargs=+ HiLink hi link <args>
-  else
-    command -nargs=+ HiLink hi def link <args>
-  endif
+"if version >= 508 || !exists("did_vhdl_syntax_inits")
+"  if version < 508
+"    let did_vhdl_syntax_inits = 1
+"    command -nargs=+ HiLink hi link <args>
+"  else
+"    command -nargs=+ HiLink hi def link <args>
+"  endif
 
-  HiLink vhdlLibrary   Include
-  HiLink vhdlSpecial   Special
-  HiLink vhdlStatement Statement
-  HiLink vhdlCharacter String
-  HiLink vhdlString    String
-  HiLink vhdlVector    String
-  HiLink vhdlBoolean   String
-  HiLink vhdlComment   Comment
-  HiLink vhdlNumber    Number
-  HiLink vhdlTime      String
-  HiLink vhdlType      Type
-  HiLink vhdlOperator  Operator
-  HiLink vhdlGlobal    Error
-  HiLink vhdlAttribute Type
+"  HiLink vhdlLibrary   Include
+"  HiLink vhdlSpecial   Special
+"  HiLink vhdlStatement Statement
+"  HiLink vhdlCharacter String
+"  HiLink vhdlString    String
+"  HiLink vhdlVector    String
+"  HiLink vhdlBoolean   String
+"  HiLink vhdlComment   Comment
+"  HiLink vhdlNumber    Number
+"  HiLink vhdlTime      String
+"  HiLink vhdlType      Type
+"  HiLink vhdlOperator  Operator
+"  HiLink vhdlGlobal    Error
+"  HiLink vhdlAttribute Type
 
-  delcommand HiLink
-endif
+"  delcommand HiLink
+" endif
 
 let b:current_syntax = "vhdl"
 
